@@ -1,6 +1,6 @@
 import pytest
 
-from loto import generate_unique_numbers
+from lotoshka import generate_unique_numbers
 
 # tests for: generate_unique_numbers
 
