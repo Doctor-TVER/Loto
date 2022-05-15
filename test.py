@@ -1,6 +1,6 @@
 import pytest
 
-from lotoshka import generate_unique_numbers
+from lotoshka import *
 
 # tests for: generate_unique_numbers
 
@@ -44,3 +44,11 @@ def test_countzero_resultempty():
 def test_maxlessthanmin_raises():
     with pytest.raises(ValueError):
         generate_unique_numbers(100, 2000, 1500)
+
+
+class TestKeg:
+    def test_init(self):
+        yyy = 100
+        assert Keg.num != yyy
+
+
