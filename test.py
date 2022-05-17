@@ -52,3 +52,14 @@ class TestKeg:
         assert Keg.num != yyy
 
 
+    def test_eq(self):
+        other = Keg()
+        m = Keg()
+        assert other != m
+
+
+class TestCard:
+    def test_eq(self):
+        ttt = Card()
+        other = Card()
+        assert len(ttt) == len(other)
