@@ -18,6 +18,12 @@ class Keg:
     def __init__(self):
         self.__num = randint(1, 90)
 
+
+    def __eq__(self, other):
+        # По количесту студентов
+        return self.__num == other.__num
+
+
     @property
     def num(self):
         return self.__num
@@ -66,6 +72,17 @@ class Card:
                 ret += ' '
 
         return ret + delimiter
+
+    @property
+    def data(self):
+        return self.__data
+
+    def __len__(self):
+        return len(self.__data)
+
+    def __eq__(self, other):
+        # По количесту студентов
+        return len(self.__data) == len(other.__data)
 
     def __contains__(self, item):
         return item in self.__data
@@ -133,3 +150,4 @@ if __name__ == '__main__':
         elif score == 2:
             print('You lose')
             break
+
